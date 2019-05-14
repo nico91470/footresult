@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import MatchCard from './MatchCard'
 
+import { Row, Col } from 'react-bootstrap'
+
 export class App extends Component {
   state = {
     matches: []
@@ -15,10 +17,16 @@ export class App extends Component {
   render() {
     return (
       <div>
-        {this.state.matches.map((match, i) => {
-          console.log("Entered")
-          return (<MatchCard key={i} match={match} />)
-        })}
+        <Row className="justify-content-md-center" >
+          {this.state.matches.map((match, i) => {
+            console.log("Entered")
+            return (
+              <Col xs lg="3">
+                <MatchCard key={i} match={match} />
+              </Col>
+            )
+          })}
+        </Row>
       </div>
     )
   }

@@ -1,10 +1,13 @@
 import React from 'react'
+import { Card } from 'react-bootstrap'
 
 export default function MatchCard(props) {
     return (
-        <div>
-            <h1>{props.match.title}</h1>
-            <div dangerouslySetInnerHTML={{ __html: props.match.embed }}></div>
-        </div>
+        <Card>
+            <Card.Img variant="top" src={props.match.thumbnail} />
+            <Card.Body>
+                <Card.Title>{props.match.title}</Card.Title>
+            </Card.Body>
+        </Card>
     )
 }
