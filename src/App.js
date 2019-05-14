@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import MatchCard from './MatchCard'
 
-import { Row, Col } from 'react-bootstrap'
+import { Col, CardDeck } from 'react-bootstrap'
 
 export class App extends Component {
   state = {
@@ -17,7 +17,7 @@ export class App extends Component {
   render() {
     return (
       <div>
-        <Row className="justify-content-md-center" >
+        <CardDeck>
           {this.state.matches.map((match, i) => {
             console.log("Entered")
             return (
@@ -26,7 +26,7 @@ export class App extends Component {
               </Col>
             )
           })}
-        </Row>
+        </CardDeck>
       </div>
     )
   }

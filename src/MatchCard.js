@@ -1,12 +1,13 @@
 import React from 'react'
-import { Card } from 'react-bootstrap'
+import { Card, Button } from 'react-bootstrap'
 
 export default function MatchCard(props) {
     return (
-        <Card>
+        <Card className="container" style={{ width: '35                   vh' }}>
             <Card.Img variant="top" src={props.match.thumbnail} />
-            <Card.Body>
-                <Card.Title>{props.match.title}</Card.Title>
+            <Card.Body className="justify-content-center">
+                <Card.Title style={{ fontSize: "15px" }}>{props.match.title}</Card.Title>
+                <Button href={props.match.url} variant="primary">See Highlights</Button>
             </Card.Body>
         </Card>
     )
